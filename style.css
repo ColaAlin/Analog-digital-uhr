@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.digital {
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 25rem;
+  font-family: "Courier New", Courier, monospace;
+  margin-right: 60px;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  background-color: snow;
+  border-radius: 150px;
+  border: 3px solid black;
+  box-shadow: 1px 1px 10px 1px black;
+  position: relative;
+}
+
+.clock .hand {
+  position: absolute;
+  bottom: 50%;
+  left: 49%;
+  right: 51%;
+  background-color: red;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  transform: translate(-50% -50%);
+}
+
+.clock::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.clock .hand.hour {
+  width: 9px;
+  height: 100px;
+  background-color: black;
+}
+
+.clock .hand.minute {
+  width: 9px;
+  height: 140px;
+  background-color: black;
+}
+
+.clock .hand.second {
+  width: 5px;
+  height: 140px;
+  background-color: black;
+}
